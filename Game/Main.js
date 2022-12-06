@@ -5,8 +5,11 @@ const chess = new Chess(canvas)
 
 window.chess = chess
 
-console.log(chess.Pieces)
+const [ king ] = chess.getPieces('king')
+const [ queen ] = chess.getPieces('queen', 'd1')
+const [ rook ] = chess.getPieces('rook', '', '')
+const [ bishop ] = chess.getPieces('bishop')
+const [ knight ] = chess.getPieces('knight')
+const [ pawn ] = chess.getPieces('pawn', 'e2')
 
-console.log(
-    chess.readPGN( 'Qf2#')
-)
+console.log(chess.Pieces)
